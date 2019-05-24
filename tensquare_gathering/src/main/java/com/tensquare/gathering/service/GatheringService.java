@@ -72,7 +72,7 @@ public class GatheringService {
 	 * @param id
 	 * @return
 	 */
-	@Cacheable(value = "gathering", key = "#id")
+	@Cacheable(value = "gathering", key = "#id")//表示使用springboot的缓存，id为下面方法中的id，存入缓存中
 	public Gathering findById(String id) {
 		return gatheringDao.findById(id).get();
 	}
@@ -90,7 +90,7 @@ public class GatheringService {
 	 * 修改
 	 * @param gathering
 	 */
-	@CacheEvict(value = "gathering", key = "#gathering.id")
+	@CacheEvict(value = "gathering", key = "#gathering.id")//从springboot的缓存中删除
 	public void update(Gathering gathering) {
 		gatheringDao.save(gathering);
 	}
