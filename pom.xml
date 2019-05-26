@@ -15,6 +15,11 @@
         <module>tensquare_article</module>
         <module>tensquare_gathering</module>
         <module>tensquare_spit</module>
+        <module>tensquare_search</module>
+        <module>tensquare_user</module>
+        <module>tensquare_sms</module>
+        <module>tensquare_eureka</module>
+        <module>tensquare_friend</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -25,7 +30,23 @@
         <relativePath/>
     </parent>
 
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Finchley.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>

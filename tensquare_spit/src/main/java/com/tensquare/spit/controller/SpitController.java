@@ -59,13 +59,13 @@ public class SpitController {
     @RequestMapping(value = "/thumbup/{spitId}", method = RequestMethod.PUT)
     public Result thumbup(@PathVariable String spitId){
         //判断当前用户是否已经点赞，但是现在我们没有做认证，暂时先把userid写死
-        String userid = "111";
+        String userid = "222";
         //判断当前用户是否已经点赞
-        if(redisTemplate.opsForValue().get("thumbup_"+userid)!=null){
+        if(redisTemplate.opsForValue().get("thumbup_"+userid+spitId)!=null){
             return new Result(false, StatusCode.REPERROR, "不能重复点赞");
         }
         spitService.thumbup(spitId);
-        redisTemplate.opsForValue().set("thumbup_"+userid, 1);
+        redisTemplate.opsForValue().set("thumbup_"+userid+spitId, 1);
         return new Result(true, StatusCode.OK, "点赞成功");
     }
 }
