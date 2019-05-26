@@ -12,12 +12,14 @@
         <module name="tensquare_eureka" />
         <module name="tensquare_friend" />
         <module name="tensquare_gathering" />
+        <module name="tensquare_manager" />
         <module name="tensquare_qa" />
         <module name="tensquare_recruit" />
         <module name="tensquare_search" />
         <module name="tensquare_sms" />
         <module name="tensquare_spit" />
         <module name="tensquare_user" />
+        <module name="tensquare_web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -27,6 +29,7 @@
       <module name="tensquare_eureka" target="1.8" />
       <module name="tensquare_friend" target="1.8" />
       <module name="tensquare_gathering" target="1.8" />
+      <module name="tensquare_manager" target="1.8" />
       <module name="tensquare_parent" target="1.8" />
       <module name="tensquare_qa" target="1.8" />
       <module name="tensquare_recruit" target="1.8" />
@@ -34,6 +37,7 @@
       <module name="tensquare_sms" target="1.8" />
       <module name="tensquare_spit" target="1.8" />
       <module name="tensquare_user" target="1.8" />
+      <module name="tensquare_web" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
