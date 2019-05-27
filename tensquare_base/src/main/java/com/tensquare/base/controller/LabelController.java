@@ -6,6 +6,7 @@ import entity.PageResult;
 import entity.Result;
 import entity.StatusCode;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,7 @@ import java.util.List;
 @RestController
 @CrossOrigin//cookie跨域
 @RequestMapping("label")
+@RefreshScope//刷新gitee上自定义的配置文件参数
 public class LabelController {
     @Autowired
     private LabelService labelService;
